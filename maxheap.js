@@ -3,7 +3,7 @@
 class MaxHeap {
     //assumes integers
     constructor(input, size) {
-        this.arr = [...input].sort();
+        this.arr = [...input].sort().reverse();
         this.size = size;
     }
 
@@ -50,7 +50,7 @@ class MaxHeap {
         this.arr.splice(i, 1);
     }
     insertKey(x) {
-        this.arr.push(x).sort();
+        this.arr.push(x).sort().reverse();
     }
     getKey(v) {
         return this.arr.findIndex(x => x === v); //not found returns -1
